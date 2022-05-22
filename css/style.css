@@ -9,10 +9,6 @@ html {
   font-family: "Roboto";
 }
 
-body {
-  overflow-x: hidden;
-}
-
 ul {
   list-style: none !important;
   margin: 0 !important;
@@ -55,7 +51,7 @@ a {
   max-width: 1140px;
   width: 100%;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 25px;
 }
 
 .header {
@@ -235,7 +231,6 @@ a {
 .room .room__cards .room__card .room__card-figure .room__card-img {
   border-radius: 5px;
   width: 100%;
-  min-height: 296px;
   object-fit: cover;
   transition: all 0.65s ease;
 }
@@ -325,6 +320,11 @@ a {
   font-weight: 400;
   font-size: 20px;
   color: #0e0e2c;
+}
+.app .app__box .app__desc .app__link-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .app .app__box .app__desc .app__link-box .app__link {
   margin-right: 24px;

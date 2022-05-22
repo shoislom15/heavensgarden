@@ -9,9 +9,9 @@ html {
   font-family: "Roboto";
 }
 
-body {
-  overflow-x: hidden;
-}
+// body {
+//   overflow-x: hidden;
+// }
 
 ul {
   list-style: none !important;
@@ -57,7 +57,7 @@ a {
   max-width: 1140px;
   width: 100%;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 25px;
 }
 
 $--primary-color: #237cf1;
@@ -275,7 +275,6 @@ $--ternary-color: #333333;
         .room__card-img {
           border-radius: 5px;
           width: 100%;
-          min-height: 296px;
           object-fit: cover;
           transition: all 0.65s ease;
         }
@@ -366,6 +365,7 @@ $--ternary-color: #333333;
     align-items: center;
     .app__desc {
       margin-left: 64px;
+
       .app__title {
         max-width: 616px;
         width: 100%;
@@ -383,6 +383,10 @@ $--ternary-color: #333333;
         color: #0e0e2c;
       }
       .app__link-box {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
         .app__link {
           margin-right: 24px;
           &:hover .app__link-img {
