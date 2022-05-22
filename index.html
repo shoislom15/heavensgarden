@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru" style="scroll-behavior: smooth">
+<html lang="ru">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -20,29 +20,66 @@
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
 
   <body>
     <header class="header" id="about">
       <div class="customContainer">
-        <nav class="header__navbar">
-          <ul class="header__list">
-            <li class="header__item">
-              <a href="#!" class="header__link active">Home</a>
-            </li>
-            <li class="header__item">
-              <a href="#!" class="header__link">Rooms & Sultes</a>
-            </li>
-            <li class="header__item">
-              <a href="#!" class="header__link">Services</a>
-            </li>
-            <li class="header__item">
-              <a href="#!" class="header__link">About US</a>
-            </li>
-            <li class="header__item">
-              <a href="#!" class="header__link">Booking</a>
-            </li>
-          </ul>
+        <div class="header__navbar">
+          <nav class="d-md-flex d-none">
+            <ul class="header__list">
+              <li class="header__item">
+                <a href="#!" class="header__link active">Home</a>
+              </li>
+              <li class="header__item">
+                <a href="#!" class="header__link">Rooms & Sultes</a>
+              </li>
+              <li class="header__item">
+                <a href="#!" class="header__link">Services</a>
+              </li>
+              <li class="header__item">
+                <a href="#about" class="header__link">About US</a>
+              </li>
+              <li class="header__item">
+                <a href="#!" class="header__link">Booking</a>
+              </li>
+            </ul>
+          </nav>
+          <nav id="hidenNav">
+            <ul>
+              <li class="header__item">
+                <a href="#!" class="header__link active">Home</a>
+              </li>
+              <li class="header__item">
+                <a href="#!" class="header__link">Rooms & Sultes</a>
+              </li>
+              <li class="header__item">
+                <a href="#services" class="header__link">Services</a>
+              </li>
+              <li class="header__item">
+                <a href="#about" class="header__link">About US</a>
+              </li>
+              <li class="header__item">
+                <a href="#!" class="header__link">Booking</a>
+              </li>
+            </ul>
+            <button id="closeBtn" class="closeBtn text-white">
+              <i class="fa-solid fa-xmark fa-xl"></i>
+            </button>
+          </nav>
+          <button
+            id="burger"
+            class="burger d-md-none d-inline-block text-white"
+          >
+            <i class="fa-solid fa-bars fa-xl"></i>
+          </button>
           <ul class="header__contact">
             <li class="header__item">
               <a
@@ -61,7 +98,7 @@
               ></a>
             </li>
           </ul>
-        </nav>
+        </div>
         <div class="header__desc">
           <h1 class="header__title">Heaven’s Garden</h1>
           <h2 class="header__subtitle">Up to 60% OFF</h2>
@@ -183,7 +220,7 @@
       <section class="app">
         <div class="customContainer">
           <div class="app__box">
-            <div class="app__img">
+            <div class="app__img d-md-flex d-none mx-auto">
               <img src="./img/telefon.png" alt="foto" class="app__image" />
             </div>
             <div class="app__desc">
@@ -194,6 +231,15 @@
                 Using a mobile appyou get almost 2 times more profit than on the
                 site.
               </p>
+              <div
+                class="d-flex d-md-none align-items-center justify-content-center"
+              >
+                <img
+                  src="./img/iPhoneGroup.png"
+                  alt="foto"
+                  class="app__image"
+                />
+              </div>
               <div class="app__link-box">
                 <a href="#" class="app__link">
                   <img
@@ -210,7 +256,7 @@
           </div>
         </div>
       </section>
-      <section class="service" id="service">
+      <section class="service" id="services">
         <div class="customContainer">
           <h2 class="service__title">
             Our <span class="service__title-span">Service</span>
@@ -420,7 +466,7 @@
       </section>
     </main>
 
-    <footer>
+    <footer class="d-none">
       <div class="customContainer">
         <div class="footer__menu">
           <div class="footer__box">
@@ -463,11 +509,11 @@
           <div class="footer__box1">
             <h2 class="footer__title1">Services</h2>
             <ul class="footer__linke">
-              <li><a href="#service">Restaurat</a></li>
-              <li><a href="#service">Coffe Shop </a></li>
-              <li><a href="#service">Car Wash</a></li>
-              <li><a href="#service">Cycle Rent</a></li>
-              <li><a href="#service">Car Rent</a></li>
+              <li><a href="#services">Restaurat</a></li>
+              <li><a href="#services">Coffe Shop </a></li>
+              <li><a href="#services">Car Wash</a></li>
+              <li><a href="#services">Cycle Rent</a></li>
+              <li><a href="#services">Car Rent</a></li>
             </ul>
           </div>
           <div class="footer__box1">
@@ -493,16 +539,6 @@
       </div>
     </footer>
 
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
-      integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
-    <script
-      type="text/javascript"
-      src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
-    ></script>
     <script src="./js/script.js"></script>
   </body>
 </html>
