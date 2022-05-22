@@ -1,11 +1,3 @@
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  overflow-x: hidden;
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -14,7 +6,7 @@ body {
 }
 
 ul {
-  list-style: none;
+  list-style: none !important;
   margin: 0 !important;
   padding: 0 !important;
 }
@@ -24,19 +16,11 @@ a {
 }
 
 .customContainer {
+  //   border: 1px solid;
   max-width: 1140px;
   width: 100%;
   margin: 0 auto;
   padding: 0 15px;
-}
-
-.social_icon {
-  width: 32px;
-  height: 32px;
-  padding: 0 !important;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 $--primary-color: #237cf1;
@@ -82,12 +66,17 @@ $--ternary-color: #333333;
 
       .header__item {
         .header__link {
+          width: 32px;
+          height: 32px;
           border-radius: 50%;
           margin-left: 12px;
           color: #fff;
           background: rgba(255, 255, 255, 0.2);
           font-size: 17px;
           transition: all 0.5s ease;
+          display: flex;
+          align-items: center;
+          justify-content: center;
           &:hover {
             transform: translateY(-10px);
             background: #237cf1;
@@ -152,7 +141,7 @@ $--ternary-color: #333333;
 
 // === Room Start ===
 .room {
-  padding: 30px 0;
+  padding: 80px 0;
 
   .room__title {
     margin-bottom: 32px;
@@ -178,14 +167,13 @@ $--ternary-color: #333333;
 
   .room__cards {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
 
     .room__card {
       border-radius: 5px;
       width: 100%;
       padding: 12px;
-      margin-bottom: 50px;
       background: linear-gradient(
         180deg,
         rgba(0, 131, 202, 0.2) 0%,
@@ -212,6 +200,7 @@ $--ternary-color: #333333;
         .room__card-img {
           border-radius: 5px;
           width: 100%;
+          min-height: 296px;
           object-fit: cover;
           transition: all 0.65s ease;
         }
@@ -604,6 +593,11 @@ footer {
       .footer__contact {
         display: flex;
         .footer__link {
+          width: 32px;
+          height: 32px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
           border-radius: 50%;
           margin: 0 8px;
           color: #fff;
