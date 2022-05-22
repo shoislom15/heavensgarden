@@ -15,10 +15,12 @@ body {
 
 ul {
   list-style: none;
+  margin: 0 !important;
+  padding: 0 !important;
 }
 
 a {
-  text-decoration: none;
+  text-decoration: none !important;
 }
 
 .customContainer {
@@ -26,6 +28,15 @@ a {
   width: 100%;
   margin: 0 auto;
   padding: 0 15px;
+}
+
+.social_icon {
+  width: 32px;
+  height: 32px;
+  padding: 0 !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 $--primary-color: #237cf1;
@@ -73,10 +84,8 @@ $--ternary-color: #333333;
         .header__link {
           border-radius: 50%;
           margin-left: 12px;
-          padding: 8px 10px;
           color: #fff;
           background: rgba(255, 255, 255, 0.2);
-          display: inline-block;
           font-size: 17px;
           transition: all 0.5s ease;
           &:hover {
@@ -597,10 +606,8 @@ footer {
         .footer__link {
           border-radius: 50%;
           margin: 0 8px;
-          padding: 8px 10px;
           color: #fff;
           background: rgba(255, 255, 255, 0.2);
-          display: inline-block;
           font-size: 17px;
           margin-bottom: 40px;
           transition: all 0.5s ease;
