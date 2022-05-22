@@ -302,9 +302,6 @@ a {
   justify-content: center;
   align-items: center;
 }
-.app .app__box .app__desc {
-  margin-left: 64px;
-}
 .app .app__box .app__desc .app__title {
   max-width: 616px;
   width: 100%;
@@ -321,19 +318,26 @@ a {
   font-size: 20px;
   color: #0e0e2c;
 }
+.app .app__box .app__desc .middle-img {
+  max-width: 361px;
+  margin: 0 auto;
+}
 .app .app__box .app__desc .app__link-box {
   display: flex;
   align-items: center;
-  justify-content: center;
+  width: 100%;
 }
 .app .app__box .app__desc .app__link-box .app__link {
-  margin-right: 24px;
+  width: 50%;
+  max-width: 216px;
+  margin-bottom: 50px;
 }
 .app .app__box .app__desc .app__link-box .app__link:hover .app__link-img {
   transform: translateY(-10px);
 }
 .app .app__box .app__desc .app__link-box .app__link .app__link-img {
   transition: all 0.5s ease;
+  width: 100%;
 }
 
 .service {
