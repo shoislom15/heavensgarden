@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru" style="scroll-behavior: smooth">
+<html lang="ru">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -20,29 +20,66 @@
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
 
   <body>
     <header class="header" id="about">
       <div class="customContainer">
-        <nav class="header__navbar">
-          <ul class="header__list">
-            <li class="header__item">
-              <a href="#!" class="header__link active">Home</a>
-            </li>
-            <li class="header__item">
-              <a href="#!" class="header__link">Rooms & Sultes</a>
-            </li>
-            <li class="header__item">
-              <a href="#!" class="header__link">Services</a>
-            </li>
-            <li class="header__item">
-              <a href="#!" class="header__link">About US</a>
-            </li>
-            <li class="header__item">
-              <a href="#!" class="header__link">Booking</a>
-            </li>
-          </ul>
+        <div class="header__navbar">
+          <nav class="d-md-flex d-none">
+            <ul class="header__list">
+              <li class="header__item">
+                <a href="#!" class="header__link active">Home</a>
+              </li>
+              <li class="header__item">
+                <a href="#!" class="header__link">Rooms & Sultes</a>
+              </li>
+              <li class="header__item">
+                <a href="#!" class="header__link">Services</a>
+              </li>
+              <li class="header__item">
+                <a href="#!" class="header__link">About US</a>
+              </li>
+              <li class="header__item">
+                <a href="#!" class="header__link">Booking</a>
+              </li>
+            </ul>
+          </nav>
+          <nav id="hidenNav">
+            <ul>
+              <li class="header__item">
+                <a href="#!" class="header__link active">Home</a>
+              </li>
+              <li class="header__item">
+                <a href="#!" class="header__link">Rooms & Sultes</a>
+              </li>
+              <li class="header__item">
+                <a href="#!" class="header__link">Services</a>
+              </li>
+              <li class="header__item">
+                <a href="#!" class="header__link">About US</a>
+              </li>
+              <li class="header__item">
+                <a href="#!" class="header__link">Booking</a>
+              </li>
+            </ul>
+            <button id="closeBtn" class="closeBtn text-white">
+              <i class="fa-solid fa-xmark fa-xl"></i>
+            </button>
+          </nav>
+          <button
+            id="burger"
+            class="burger d-md-none d-inline-block text-white"
+          >
+            <i class="fa-solid fa-bars fa-xl"></i>
+          </button>
           <ul class="header__contact">
             <li class="header__item">
               <a
@@ -61,7 +98,7 @@
               ></a>
             </li>
           </ul>
-        </nav>
+        </div>
         <div class="header__desc">
           <h1 class="header__title">Heaven’s Garden</h1>
           <h2 class="header__subtitle">Up to 60% OFF</h2>
@@ -80,7 +117,7 @@
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tempor
             viverra parturient diam sagittis nec cras.
           </p>
-          <div class="room__cards row g-5">
+          <div class="room__cards row g-md-5 g-4">
             <div class="col-lg-4 col-sm-6 col-xs-12">
               <div class="room__card">
                 <div class="room__card-figure">
@@ -493,16 +530,6 @@
       </div>
     </footer>
 
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
-      integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
-    <script
-      type="text/javascript"
-      src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
-    ></script>
     <script src="./js/script.js"></script>
   </body>
 </html>

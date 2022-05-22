@@ -1,8 +1,16 @@
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Roboto";
+}
+
+body {
+  overflow-x: hidden;
 }
 
 ul {
@@ -15,11 +23,39 @@ a {
   text-decoration: none !important;
 }
 
+.closeBtn {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  display: none;
+  border: none;
+  background-color: transparent;
+  padding: 6px 12px;
+  border-radius: 5px;
+}
+.closeBtn:active {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.burger {
+  border: none;
+  background-color: transparent;
+  padding: 8px 10px;
+  border-radius: 5px;
+}
+.burger:active {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.open {
+  transform: translateX(0) !important;
+}
+
 .customContainer {
   max-width: 1140px;
   width: 100%;
   margin: 0 auto;
-  padding: 0 15px;
+  padding: 0 20px;
 }
 
 .header {
@@ -32,21 +68,54 @@ a {
   justify-content: space-between;
   align-items: center;
 }
-.header .header__navbar .header__list {
+.header .header__navbar #hidenNav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  min-height: 100vh;
+  z-index: 1000;
+  transform: translateX(-200%);
+  transition: 0.3s;
+}
+.header .header__navbar #hidenNav .closeBtn {
+  display: inline-block;
+}
+.header .header__navbar #hidenNav ul {
+  width: 50%;
+  min-width: 300px;
+  padding: 50px !important;
+  background: linear-gradient(#387b97, rgba(255, 255, 255, 0.2));
+  backdrop-filter: blur(5px);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  gap: 5vh;
+}
+.header .header__navbar #hidenNav ul .header__link {
+  color: white !important;
+}
+.header .header__navbar nav {
+  position: sticky;
+  top: 0;
+}
+.header .header__navbar nav .header__list {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.header .header__navbar .header__list .header__item .header__link {
+.header .header__navbar nav .header__list .header__item .header__link {
   margin-right: 32px;
   color: #c2c7ce;
   font-weight: 400;
   transition: all 0.5s ease;
 }
-.header .header__navbar .header__list .header__item .header__link:hover {
+.header .header__navbar nav .header__list .header__item .header__link:hover {
   color: #fff;
 }
-.header .header__navbar .header__list .header__item .active {
+.header .header__navbar nav .header__list .header__item .active {
   color: #fff;
 }
 .header .header__navbar .header__contact {
@@ -177,12 +246,13 @@ a {
   justify-content: space-between;
   align-items: center;
   position: absolute;
-  bottom: 20px;
+  bottom: 0px;
   left: 0;
 }
 .room .room__cards .room__card .room__card-figure .room__card-desc .room__card-txt {
   color: #fff;
   font-weight: 400;
+  margin-bottom: 20px;
 }
 .room .room__cards .room__card .room__card-header {
   margin: 25px 0;
